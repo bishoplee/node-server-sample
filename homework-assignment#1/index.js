@@ -65,7 +65,6 @@ const httpServer = http.createServer((req, res) => {
             res.end(payloadString);
 
             // Log response
-            // console.log("Request received on path: " + trimmedPath + " with method " + method + " having query " + queryStringObject);
             console.log("Response contains", statusCode, payloadString);
         });
     });
@@ -86,7 +85,7 @@ handlers.notFound = (data, callback) => {
     });
 };
 
-// Check if server is alive
+// if route is /hello
 handlers.hello = (data, callback) => {
     // Callback http status code and payload object
     callback(200, {'message' : 'Welcome to the barebone node server created for my Pirple Node.js Master Class assignment.'});
